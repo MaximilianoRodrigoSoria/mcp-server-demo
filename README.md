@@ -1,3 +1,17 @@
+<p align="center">
+<a href="https://www.linkedin.com/in/soriamaximilianorodrigo/" target="_blank" rel="noopener noreferrer">
+<img width="100%" height="100%" src="docs/img/banner.gif" alt="mcp-server-demo"></a>
+</p>
+
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/MCP-Model_Context_Protocol-7C3AED?logo=anthropic&logoColor=white" alt="MCP"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Python_%2F_TypeScript-FastMCP-3776AB" alt="SDK"></a>
+  <a href="#"><img src="https://img.shields.io/badge/DB-SQLite-003B57?logo=sqlite&logoColor=white" alt="SQLite"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Transporte-stdio_%7C_HTTP-2496ED" alt="Transporte"></a>
+</p>
+
+---
+
 # mcp-server-demo
 
 Servidor **MCP (Model Context Protocol)** que expone herramientas propias para que un LLM las use de forma estandarizada: consultas a una base de datos y a una API externa, con validación de entrada y manejo de errores.
