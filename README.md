@@ -78,7 +78,3 @@ mcp-server-demo/
     ├── test_db_tools.py
     └── test_api_tools.py
 ```
-
-## Criterios de "terminado"
-
-Un cliente MCP (Inspector o Claude Desktop) descubre las herramientas, un LLM las invoca correctamente contra la DB y la API externa, y las entradas están validadas y los errores manejados. El server funciona por stdio local y, opcionalmente, por HTTP remoto.
