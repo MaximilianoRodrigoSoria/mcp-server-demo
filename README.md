@@ -4,17 +4,30 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/MCP-Model_Context_Protocol-7C3AED?logo=anthropic&logoColor=white" alt="MCP"></a>
+  <a href="#"><img src="https://img.shields.io/badge/MCP-Model_Context_Protocol-14B8A6?logo=anthropic&logoColor=white" alt="MCP"></a>
   <a href="#"><img src="https://img.shields.io/badge/Python_%2F_TypeScript-FastMCP-3776AB" alt="SDK"></a>
   <a href="#"><img src="https://img.shields.io/badge/DB-SQLite-003B57?logo=sqlite&logoColor=white" alt="SQLite"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Transporte-stdio_%7C_HTTP-2496ED" alt="Transporte"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Transporte-stdio_%7C_HTTP-22D3EE" alt="Transporte"></a>
 </p>
 
----
+<p align="center">
+  <a href="https://github.com/DietrichGebert/ponytail"><img src="https://img.shields.io/badge/built_with-ponytail-111111?style=flat-square" alt="ponytail"></a>
+  <img src="https://img.shields.io/badge/layout-src%2Fpackage-14B8A6?style=flat-square" alt="src layout">
+  <img src="https://img.shields.io/badge/license-MIT-success?style=flat-square" alt="MIT">
+</p>
 
-# mcp-server-demo
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=1DE9B6&center=true&vCenter=true&width=820&lines=Model+Context+Protocol%3A+tools+para+tu+LLM;SQLite+%2B+API+externa+expuestas+como+tools;stdio+local+o+HTTP+remoto" alt="typing SVG">
+</p>
 
-Servidor **MCP (Model Context Protocol)** que expone herramientas propias para que un LLM las use de forma estandarizada: consultas a una base de datos y a una API externa, con validación de entrada y manejo de errores.
+<hr/>
+
+<h1 align="center">mcp-server-demo</h1>
+
+<p align="center">
+Servidor <b>MCP (Model Context Protocol)</b> que expone herramientas propias
+(consultas a una base SQLite y a una API externa) para que un LLM las use de forma estandarizada.
+</p>
 
 ## Objetivo
 
@@ -65,51 +78,6 @@ mcp-server-demo/
     ├── test_db_tools.py
     └── test_api_tools.py
 ```
-
-## Checklist de implementación
-
-### Fase 1 — Setup
-
-- [ ] Inicializar el proyecto y elegir SDK (Python `mcp`/`FastMCP` o TypeScript).
-- [ ] Definir `.env.example` (base URL de la API externa, API key si aplica).
-- [ ] Crear `seed.sql` con un dominio simple (ej. clientes/pedidos) y el script `seed_db.py`.
-
-### Fase 2 — Tools de base de datos
-
-- [ ] Implementar la conexión con **queries parametrizadas** (evitar inyección SQL).
-- [ ] Exponer al menos 2 tools de DB (ej. `search_customers`, `get_order_by_id`) con schema de entrada tipado y descripciones claras.
-- [ ] Manejar el caso "sin resultados" y errores de forma explícita (mensajes útiles para el LLM).
-
-### Fase 3 — Tools de API externa
-
-- [ ] Implementar un cliente HTTP con timeout y reintentos.
-- [ ] Exponer al menos 1 tool que llame a la API externa (ej. `get_weather(city)`).
-- [ ] Normalizar la respuesta a un formato compacto y útil para el modelo.
-
-### Fase 4 — Resources y prompts
-
-- [ ] Exponer el **esquema de la DB** como resource para que el modelo sepa qué puede consultar.
-- [ ] (Opcional) Añadir un prompt template reutilizable (ej. "analiza estos pedidos").
-
-### Fase 5 — Robustez y seguridad
-
-- [ ] Validar todas las entradas antes de tocar DB o API.
-- [ ] Descripciones de tools precisas (el LLM decide cuándo usarlas según la descripción).
-- [ ] No exponer secretos en respuestas ni logs; leer keys desde entorno.
-- [ ] Logging básico de invocaciones (tool, args, latencia).
-
-### Fase 6 — Integración y prueba
-
-- [ ] Probar con **MCP Inspector**: listar tools/resources e invocarlos.
-- [ ] Registrar el server en Claude Desktop con `examples/claude_desktop_config.json` y hacer una prueba real.
-- [ ] (Opcional) Consumirlo desde `multi-agent-orchestration` para cerrar el portfolio.
-- [ ] Variante Streamable HTTP para demostrar exposición remota.
-
-### Fase 7 — Documentación
-
-- [ ] README con cómo levantar el server (stdio y HTTP) y cómo registrarlo en un cliente.
-- [ ] Tabla de tools/resources con descripción, parámetros y ejemplo.
-- [ ] ADR breve: elección de transporte (stdio vs HTTP) y del SDK.
 
 ## Criterios de "terminado"
 
