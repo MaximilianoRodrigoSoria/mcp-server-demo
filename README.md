@@ -4,10 +4,10 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/MCP-Model_Context_Protocol-14B8A6?logo=anthropic&logoColor=white" alt="MCP"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Python_%2F_TypeScript-FastMCP-3776AB" alt="SDK"></a>
-  <a href="#"><img src="https://img.shields.io/badge/DB-SQLite-003B57?logo=sqlite&logoColor=white" alt="SQLite"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Transporte-stdio_%7C_HTTP-22D3EE" alt="Transporte"></a>
+  <a href="#"><img src="https://img.shields.io/badge/MCP-Model_Context_Protocol-14B8A6?logo=anthropic&logoColor=white&style=flat-square" alt="MCP"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Python_%2F_TypeScript-FastMCP-3776AB?style=flat-square" alt="SDK"></a>
+  <a href="#"><img src="https://img.shields.io/badge/DB-SQLite-003B57?logo=sqlite&logoColor=white&style=flat-square" alt="SQLite"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Transporte-stdio_%7C_HTTP-22D3EE?style=flat-square" alt="Transporte"></a>
 </p>
 
 <p align="center">
