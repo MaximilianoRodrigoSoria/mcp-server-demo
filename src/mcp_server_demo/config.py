@@ -12,7 +12,13 @@ ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        extra="ignore",
+        # Permite construir Settings(db_path=...) por nombre además de por alias,
+        # necesario para overridear la DB en los tests.
+        populate_by_name=True,
+    )
 
     db_path: str = Field(default="./data/demo.db", alias="DB_PATH")
     geocode_url: str = Field(

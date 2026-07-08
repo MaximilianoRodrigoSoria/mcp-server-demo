@@ -9,7 +9,3 @@ __pycache__/
 
 # Sistema
 .DS_Store
-
-# Podcast (no publicar)
-podcast-guion.md
-*.wav

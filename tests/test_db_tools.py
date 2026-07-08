@@ -19,7 +19,7 @@ def seeded_db(tmp_path, monkeypatch):
     conn.executescript(sql)
     conn.commit()
     conn.close()
-    monkeypatch.setattr(config, "get_settings", lambda: config.Settings(_env_file=None, db_path=str(db)))
+    monkeypatch.setattr(config, "get_settings", lambda: config.Settings(_env_file=None, DB_PATH=str(db)))
     # db_tools importó get_settings por nombre: apuntarlo también
     monkeypatch.setattr(db_tools, "get_settings", config.get_settings)
     return db

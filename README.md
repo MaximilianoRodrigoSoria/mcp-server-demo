@@ -39,7 +39,7 @@ El servidor expone, como mínimo:
 - **Resources** — datos legibles por el modelo (ej. el esquema de la base, un catálogo).
 - (Opcional) **Prompts** — plantillas de prompt reutilizables parametrizadas.
 
-## Stack tecnológico sugerido
+## Stack tecnológico
 
 - **Opción A — Python:** SDK oficial `mcp` (con `FastMCP`) — recomendado por rapidez de desarrollo
 - **Opción B — TypeScript:** `@modelcontextprotocol/sdk` — útil si se quiere mostrar versatilidad
@@ -50,7 +50,7 @@ El servidor expone, como mínimo:
 - **Cliente de prueba:** MCP Inspector (`npx @modelcontextprotocol/inspector`) y/o Claude Desktop
 - **Testing / calidad:** pytest (o vitest), ruff/black (o eslint/prettier)
 
-## Estructura de carpetas propuesta (variante Python)
+## Estructura de carpetas (variante Python)
 
 ```
 mcp-server-demo/

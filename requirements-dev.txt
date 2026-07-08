@@ -1,0 +1,5 @@
+# Mínimo para sembrar la DB y correr los tests offline (HTTP mockeado).
+# Instalar:  python -m pip install --user -r requirements-dev.txt
+httpx>=0.27
+pydantic-settings>=2.3
+pytest>=8.2
