@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "mcp-server-demo": {
+      "command": "poetry",
+      "args": ["run", "python", "-m", "mcp_server_demo.server"],
+      "cwd": "/ruta/a/mcp-server-demo"
+    }
+  }
+}
