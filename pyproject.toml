@@ -20,7 +20,7 @@ pydantic-settings = ">=2.3"
 optional = true
 
 [tool.poetry.group.dev.dependencies]
-pytest = ">=8.2"
+pytest = ">=9.1.1"
 ruff = ">=0.5"
 black = ">=24.4"
 
