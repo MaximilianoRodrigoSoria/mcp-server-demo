@@ -20,6 +20,16 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=1DE9B6&center=true&vCenter=true&width=820&lines=Model+Context+Protocol%3A+tools+para+tu+LLM;SQLite+%2B+API+externa+expuestas+como+tools;stdio+local+o+HTTP+remoto" alt="typing SVG">
 </p>
 
+<!-- dynamic-badges -->
+<p align="center">
+  <a href="https://github.com/MaximilianoRodrigoSoria/mcp-server-demo/actions"><img src="https://img.shields.io/github/actions/workflow/status/MaximilianoRodrigoSoria/mcp-server-demo/ci.yml?style=flat-square&logo=githubactions&logoColor=white&label=CI&labelColor=1A1C1F&color=06C69C" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/MaximilianoRodrigoSoria/mcp-server-demo?style=flat-square&labelColor=1A1C1F&color=06C69C" alt="License"></a>
+  <img src="https://img.shields.io/github/last-commit/MaximilianoRodrigoSoria/mcp-server-demo?style=flat-square&labelColor=1A1C1F&color=06C69C" alt="Last commit">
+  <img src="https://img.shields.io/github/repo-size/MaximilianoRodrigoSoria/mcp-server-demo?style=flat-square&labelColor=1A1C1F&color=06C69C" alt="Repo size">
+  <a href="https://maximilianorodrigosoria.github.io/mcp-server-demo/"><img src="https://img.shields.io/badge/GitHub_Pages-online-02ECB6?style=flat-square&logo=githubpages&logoColor=white&labelColor=1A1C1F" alt="Pages"></a>
+  <img src="https://img.shields.io/badge/Python-3.12-06C69C?style=flat-square&logo=python&logoColor=white&labelColor=1A1C1F" alt="Python">
+</p>
+
 <hr/>
 
 <h1 align="center">mcp-server-demo</h1>
@@ -77,4 +87,17 @@ mcp-server-demo/
 └── tests/
     ├── test_db_tools.py
     └── test_api_tools.py
+```
+
+---
+
+<!-- diagrama-mermaid -->
+## 📊 Diagrama
+
+```mermaid
+flowchart LR
+    client["Cliente MCP<br/>Claude Desktop · IDE · agentes"] -->|stdio| server["Servidor MCP · FastMCP"]
+    server --> db["Tool SQLite<br/>search_customers · get_order_by_id"]
+    server --> api["Tool clima<br/>get_weather · Open-Meteo"]
+    server --> res["Resource<br/>esquema de la base"]
 ```
