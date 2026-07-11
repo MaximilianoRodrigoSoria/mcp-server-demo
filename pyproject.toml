@@ -21,7 +21,7 @@ optional = true
 
 [tool.poetry.group.dev.dependencies]
 pytest = ">=8.2"
-ruff = ">=0.5"
+ruff = ">=0.15.21"
 black = ">=24.4"
 
 [tool.poetry.scripts]
